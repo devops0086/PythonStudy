@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+(print("Start"))
 s = pd.Series([1,3,5,np.nan,6,8])
 print(s)
 dates=pd.date_range('20130101', periods = 6)
@@ -8,7 +9,7 @@ df=pd.DataFrame(np.random.randn(6,4),index=dates,columns=list(["Apple","Banana",
 print(df)
 
 #1the next set of dataframe is made for strings that turn to columns
-print(1)
+print("Exercise1")
 dates=pd.date_range('20130101', periods = 6)
 print(dates)
 df=pd.DataFrame(np.random.randn(6,4),index=dates,columns=list("EFGH"))
@@ -25,12 +26,12 @@ print(df2)
 print(df2.dtypes)
 
 #2printing top and bottom of data
-print(2)
+print("Exercise2")
 print(df.head())
 print(df.tail(3))
 
 #4.1 this is actually after 4, to see what dtypes come up with using just pandas
-print(4.1)
+print("Exercise4.1")
 print(df.dtypes)
 print(df2.dtypes)
 
@@ -40,7 +41,7 @@ print(df.index)
 print(df.columns)
 
 #4moving dataframes to numpy
-print(4)
+print("Exercise4")
 print(df.to_numpy)
 print(df.dtypes)
 
@@ -63,3 +64,35 @@ NumPy arrays are made to be created as homogeneous arrays,
  It would not be possible with heterogeneous data sets.
  https://towardsdatascience.com/a-hitchhiker-guide-to-python-numpy-arrays-9358de570121
 '''
+
+#5 describing the data as in mean, median, etc.
+print("Exercise5")
+print(df.describe())
+
+#6 transposing data
+print("Exercise6")
+print(df)
+print(df.T)
+
+#7Sorting data by row
+print("Exercise7 this will sort by column it seems")
+print(df.sort_index(axis=0,ascending=False))
+
+#8Sorting by column
+print("Exercise8 sorting by column")
+print(df.columns) #this will show the column names
+print(df.sort_values(by='F',ascending=False)) #this will show what column name to sort by
+
+#9 isolating data dataframes
+print("Exercise9 isolating columns, and printing just one column")
+print(df.E.sort_values(ascending=False))
+print(df.sort_values(by='E',ascending=False))
+print(df.E)
+
+#10 slicing rows up, not columns. splitting rows.
+print("Exercise10 splitting rows up")
+print(df["20130101":"20130105"])
+print(df[0:3])
+print(df.iloc[:, 0]) #tried to isolate the first columns
+
+#11 Selection by label
