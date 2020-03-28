@@ -96,3 +96,5 @@ print(df[0:3])
 print(df.iloc[:, 0]) #tried to isolate the first columns
 
 #11 Selection by label
+print("Exercise11 Selection by label (so row 0 for example)")
+print(df.loc[dates[2]]) #this is actually row 4 in Excel. in pandas 0 = first row where array is
