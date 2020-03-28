@@ -1,5 +1,5 @@
 borrow=int(input("How much would you like to borrow (round to nearest $100)? "))
-interest_rate=float(input("What is the interest rate on the loan? "))
+interest_rate=float(input("What is the interest rate (in decimals) on the loan? "))
 admin_cost=int(input("What is the admin cost per $100: "))
 every_x_dollar=100
 print("Please note the admin cost is,","$",str(admin_cost)," per, $100.")
