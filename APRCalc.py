@@ -7,4 +7,6 @@ fees=(borrow/every_x_dollar)*admin_cost
 interest_exp=borrow*interest_rate
 payback=14
 APR=((((fees+interest_exp)/borrow)/payback)*365)*100
-print(round(float(APR),2),str("%"))
+print("The APR is: ",str(round(float(APR),2)),str("%"))
+EAR=((((1+((APR/100)/24))**24)-1)*100)
+print("The EAR on the other other hand is: ",str(round(float(EAR),2)),"%")
