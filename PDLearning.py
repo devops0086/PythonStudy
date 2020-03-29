@@ -98,3 +98,21 @@ print(df.iloc[:, 0]) #tried to isolate the first columns
 #11 Selection by label
 print("Exercise11 Selection by label (so row 0 for example)")
 print(df.loc[dates[2]]) #this is actually row 4 in Excel. in pandas 0 = first row where array is
+
+#SideStep1 Understanding data frames using Pandas, constructing
+df3=pd.DataFrame([[1,2],[3,4],[5,6]],index=['John','Bon','Bovine'],columns=['Jack','Jill'])
+'''
+Square brackets are lists, they can be changed. Parentheses "()" are tuples, and cannot be changed.
+Single label. Note this returns the row as a Series.
+
+df.loc['viper']
+max_speed    6
+shield       5
+Name: viper, dtype: int64
+List of labels. Note using [[]] returns a DataFrame.
+
+df.loc[['viper', 'sidewinder']]
+'''
+print(df3)
+
+#12
