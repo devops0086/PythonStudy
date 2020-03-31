@@ -15,7 +15,8 @@ print(dates)
 df=pd.DataFrame(np.random.randn(6,4),index=dates,columns=list("EFGH"))
 print(df)
 
-#turn dictionaries into a Series
+#1.1turn dictionaries into a Series
+print("1.1 Turn dictionaries into a series")
 df2 = pd.DataFrame({"A":1.,
                     'B':pd.Timestamp('20200101'),
                     'C':pd.Series(np.random.randn(), index=list(range(4)), dtype='float32'),
@@ -36,7 +37,7 @@ print(df.dtypes)
 print(df2.dtypes)
 
 #3displaying index and column
-print(3)
+print("Exercise3")
 print(df.index)
 print(df.columns)
 
