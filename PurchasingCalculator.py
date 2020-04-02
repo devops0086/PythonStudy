@@ -9,3 +9,5 @@ if discountinpercentages > 0:
     print("Total",str(discountinpercentages)," ","Monthly at,",str(paybackterm)," is equal to",str(discountinpercentages/paybackterm))
 else:
     print("Total",str(discountindollars)," ","Months to pay back:",str(paybackterm),"; is equal to",str(discountindollars/paybackterm))
+
+input("press enter to close:")
