@@ -77,6 +77,10 @@ print(df.T)
 
 #7Sorting data by row
 print("Exercise7 this will sort by column it seems")
+print("Data before sort")
+print(df)
+print("Data after sort")
+axis=axis=0
 print(df.sort_index(axis=0,ascending=False))
 
 #8Sorting by column
